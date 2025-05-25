@@ -11,6 +11,13 @@ import ReactDOM from 'react-dom/client';
 const Heading = () =>{
   return <h1>Nama3te from Arrow Function</h1>;
 }
+
+const Component = () => (
+  <div id='container'>
+    <h1>Nothing just jsx code 😎</h1>
+  </div>
+);
 // console.log(Heading);
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<Heading/>)
+root.render(<Component/>)
