@@ -17,7 +17,20 @@ const Component = () => (
     <h1>Nothing just jsx code 😎</h1>
   </div>
 );
+
+const Head = () => (
+  <div id='Head'>
+    <span>
+      <p>
+        <Component/>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </span>
+  </div>
+);
+
+
 // console.log(Heading);
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Heading/>)
-root.render(<Component/>)
+// root.render(<Heading/>)
+root.render(<Head/>)
