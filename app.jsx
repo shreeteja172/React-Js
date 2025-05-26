@@ -1,36 +1,71 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-//React.createElement => Object => HTMLRender(render)
-//JSX transpiled before reaching the js - Parcel - Babel
-//JSX => React.createElement => Object => HTMLRender(render)
-// console.log("Hello")
+/**
+ * Header
+ *  - Logo
+ *  - Nav items
+ * Body 
+ *  - Search
+ *  - Restaurant Container
+ *    - Cards
+ * Footer
+ *  - Links
+ *  - Copyright
+ *  - Contact
+ */
 
-// const heading = <h1 id='heading' className='head'>Hello from JSX</h1>
-
-const Heading = () =>{
-  return <h1>Nama3te from Arrow Function</h1>;
+const Header = () => {
+  return (
+    <div className='header'>
+      <div className='logo-container'>
+        <img className='logo' src="logo.png" alt="Food App design" />
+      </div>
+      <div className='nav-items'>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About Us</li>
+          <li>View Cart</li>
+        </ul>
+      </div>
+    </div>
+  )
 }
+const RestaurantCard = () => {
+  return (
+    <div className='res-card'>
+      <img className='card-img' src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/1c76ad24c0a126ed8414ae344d22c372" alt="Paneer-Biryani" />
+      <h3>Krushna Hotel</h3>
+      <h4>5 star</h4>
+      <h4>35 minutes away</h4>
+    </div>
+  )
+}
+const Body = () => {
+  return (
+    <div className='body'>
+      <div className="search">
+        <input type="text" name="" id="" />
+      </div>
+      
+      <div className='res-container'>
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  )
+}
+const AppLayout = () => {
+  return (<div className='app'>
+    <Header/>
+    <Body/>
+  </div>);
+};
 
-const Component = () => (
-  <div id='container'>
-    <h1>Nothing just jsx code 😎</h1>
-  </div>
-);
-
-const Head = () => (
-  <div id='Head'>
-    <span>
-      <p>
-        <Component/>
-        Lorem ipsum dolor sit amet.
-      </p>
-    </span>
-  </div>
-);
-
-
-// console.log(Heading);
 const root = ReactDOM.createRoot(document.getElementById('root'))
-// root.render(<Heading/>)
-root.render(<Head/>)
+
+root.render(<AppLayout/>)
