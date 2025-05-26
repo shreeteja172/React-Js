@@ -1,5 +1,4 @@
-
-export const restaurants = [
+const restaurants = [
   {
     id: 1,
     title: "Green Garden Veg Cafe",
@@ -7,6 +6,7 @@ export const restaurants = [
     photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
     price: 700,
     deliveryTime: "30-45 mins",
+    
   },
   {
     id: 2,
@@ -97,3 +97,5 @@ export const restaurants = [
     deliveryTime: "40-50 mins",
   },
 ];
+
+export default restaurants;
