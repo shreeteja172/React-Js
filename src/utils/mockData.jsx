@@ -1,4 +1,4 @@
-const restaurants = [
+const restaurantsData = [
   {
     id: 1,
     title: "Paneer Biryani Delight",
@@ -121,4 +121,4 @@ const restaurants = [
   }
 ];
 
-export default restaurants;
+export default restaurantsData;
