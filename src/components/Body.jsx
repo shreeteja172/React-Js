@@ -1,25 +1,44 @@
-import restaurantsData from "../utils/mockData"; 
+import restaurantsData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState(restaurantsData);
+  const [searchText, setSearchText] = useState("");
+  const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantsData);
+
+  const handleSearch = () => {
+    const filtered = restaurantsData.filter((res) =>
+      res.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredRestaurant(filtered);
+  };
+
+  const handleTopRated = () => {
+    const filtered = restaurantsData.filter((res) => res.rating > 4);
+    setFilteredRestaurant(filtered);
+  };
 
   return (
     <div className="body">
       <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filtered = restaurantsData.filter((res) => res.rating > 4);
-            setRestaurants(filtered);
-          }}
-        >
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button className="search-btn" onClick={handleSearch}>
+            Search
+          </button>
+        </div>
+        <button className="filter-btn" onClick={handleTopRated}>
           Top Rated
         </button>
       </div>
       <div className="res-container">
-        {restaurants.map((restaurant) => (
+        {filteredRestaurant.map((restaurant) => (
           <RestaurantCard
             key={restaurant.id}
             title={restaurant.title}
@@ -36,3 +55,4 @@ const Body = () => {
 };
 
 export default Body;
+

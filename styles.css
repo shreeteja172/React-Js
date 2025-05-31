@@ -156,3 +156,91 @@
     height: 120px;
   }
 }
+
+/* Shimmer effect */
+.shimmer-card {
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-img {
+  width: 100%;
+  height: 140px;
+  background-color: #e0e0e0;
+}
+
+.shimmer-line {
+  height: 12px;
+  background-color: #e0e0e0;
+  margin: 8px 10px;
+  border-radius: 4px;
+}
+
+.shimmer-line.short {
+  width: 60%;
+}
+
+.shimmer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+/* Login Button */
+.login-btn {
+  padding: 8px 16px;
+  background-color: #2563eb; /* Blue for login */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+  margin-left: auto; /* Push button to the end */
+  order: 2; /* Position after cart */
+  display: flex;
+
+  /* flex-wrap: wra; */
+}
+
+.login-btn:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(37, 99, 235, 0.4);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.3);
+}
+
+.login-btn.logout {
+  background-color: #d90429; /* Red for logout */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.login-btn.logout:hover {
+  background-color: #ef233c;
+  box-shadow: 0 3px 6px rgba(217, 4, 41, 0.4);
+}
+
+.login-btn.logout:active {
+  box-shadow: 0 1px 2px rgba(217, 4, 41, 0.3);
+}
