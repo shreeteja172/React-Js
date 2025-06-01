@@ -7,7 +7,7 @@ const restaurantsData = [
     price: 700,
     deliveryTime: "30-45 mins",
     rating: 4.2,
-    category: "Veg"
+    category: "Non-Veg"
   },
   {
     id: 2,
@@ -61,13 +61,13 @@ const restaurantsData = [
   },
   {
     id: 7,
-    title: "Grilled Veg Burger",
-    cuisines: "Grilled Veggie Spicy Delights",
+    title: "Grilled Burger",
+    cuisines: "Grilled Spicy Delights",
     photo: "https://images.unsplash.com/photo-1559329007-40df8a9345d8",
     price: 300,
     deliveryTime: "20-30 mins",
     rating: 4.1,
-    category: "Veg"
+    category: "Non-Veg"
   },
   {
     id: 8,
@@ -91,13 +91,13 @@ const restaurantsData = [
   },
   {
     id: 10,
-    title: "Paneer Tikka Biryani",
+    title: " Tikka Biryani",
     cuisines: "Spicy Paneer Biryani",
     photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
     price: 1500,
     deliveryTime: "35-45 mins",
     rating: 4.6,
-    category: "Veg"
+    category: "Non-Veg"
   },
   {
     id: 11,

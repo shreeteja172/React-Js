@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
+  const [temp,settemp] = useState(false)
   const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantsData);
 
   const handleSearch = () => {
@@ -37,6 +38,15 @@ const Body = () => {
           Top Rated
         </button>
       </div>
+
+      <button onClick={()=>{
+        settemp(!temp)
+        const retrieveddata  = restaurantsData.filter((data)=> (
+          data.price > 500
+        ))
+        setFilteredRestaurant(retrieveddata)
+      }}>Over 500$</button>
+      
       <div className="res-container">
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard
@@ -47,6 +57,7 @@ const Body = () => {
             price={restaurant.price}
             rating={restaurant.rating}
             deliveryTime={restaurant.deliveryTime}
+            category={restaurant.category}
           />
         ))}
       </div>
