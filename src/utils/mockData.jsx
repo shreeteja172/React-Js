@@ -1,8 +1,21 @@
+import Vaish from "../assets/images/restaurants/vaish.jpg"
+import Shabree from "../assets/images/restaurants/shabree.jpg"
+import Kayani from "../assets/images/restaurants/kayani.jpg"
+import Goodluck from "../assets/images/restaurants/goodluck.jpg"
+import Vohuman from "../assets/images/restaurants/vohuman.jpg"
+import Chitale from "../assets/images/restaurants/chitale.jpg"
+import Fergusson from "../assets/images/restaurants/fergusson.jpg"
+import GreenLeaf from "../assets/images/restaurants/greenleaf.jpg"
+import Durvankur from "../assets/images/restaurants/durvankur.jpg"
+import KayaniRest from "../assets/images/restaurants/kayanirest.jpg"
+import Sujata from "../assets/images/restaurants/sujata.jpg"
+import Herbal from "../assets/images/restaurants/herbal.jpg"
+
 const restaurantsData = [
   {
     id: 1,
     title: "Vaishali Restaurant",
-    photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+    photo: Vaish,
     deliveryTime: "30-45 mins",
     category: "Non-Veg",
     menu: [
@@ -13,7 +26,7 @@ const restaurantsData = [
   {
     id: 2,
     title: "Shabree Restaurant",
-    photo: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe",
+    photo: Shabree,
     deliveryTime: "20-30 mins",
     category: "Veg",
     menu: [
@@ -24,7 +37,7 @@ const restaurantsData = [
   {
     id: 3,
     title: "Kayani Bakery",
-    photo: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+    photo: Kayani,
     deliveryTime: "40-60 mins",
     category: "Veg",
     menu: [
@@ -35,7 +48,7 @@ const restaurantsData = [
   {
     id: 4,
     title: "Goodluck Cafe",
-    photo: "https://images.unsplash.com/photo-1565958011703-44f9829ba187",
+    photo: Goodluck,
     deliveryTime: "25-35 mins",
     category: "Veg",
     menu: [
@@ -46,7 +59,7 @@ const restaurantsData = [
   {
     id: 5,
     title: "Vohuman Cafe",
-    photo: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    photo: Vohuman,
     deliveryTime: "35-50 mins",
     category: "Veg",
     menu: [
@@ -57,7 +70,7 @@ const restaurantsData = [
   {
     id: 6,
     title: "Chitale Bandhu Mithaiwale",
-    photo: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+    photo: Chitale,
     deliveryTime: "30-45 mins",
     category: "Veg",
     menu: [
@@ -68,7 +81,7 @@ const restaurantsData = [
   {
     id: 7,
     title: "Fergusson College Canteen",
-    photo: "https://images.unsplash.com/photo-1559329007-40df8a9345d8",
+    photo: Fergusson,
     deliveryTime: "20-30 mins",
     category: "Non-Veg",
     menu: [
@@ -79,7 +92,7 @@ const restaurantsData = [
   {
     id: 8,
     title: "Green Leaf Cafe",
-    photo: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe",
+    photo: GreenLeaf,
     deliveryTime: "25-40 mins",
     category: "Veg",
     menu: [
@@ -90,7 +103,7 @@ const restaurantsData = [
   {
     id: 9,
     title: "Durvankur Restaurant",
-    photo: "https://images.unsplash.com/photo-1543332164-6e82f355badc",
+    photo: Durvankur,
     deliveryTime: "30-50 mins",
     category: "Veg",
     menu: [
@@ -101,7 +114,7 @@ const restaurantsData = [
   {
     id: 10,
     title: "Kayani Restaurant",
-    photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+    photo: KayaniRest,
     deliveryTime: "35-45 mins",
     category: "Non-Veg",
     menu: [
@@ -112,7 +125,7 @@ const restaurantsData = [
   {
     id: 11,
     title: "Sujata Mastani",
-    photo: "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    photo: Sujata,
     deliveryTime: "20-25 mins",
     category: "Non-Veg",
     menu: [
@@ -123,7 +136,7 @@ const restaurantsData = [
   {
     id: 12,
     title: "Herbal Veg Kitchen",
-    photo: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+    photo: Herbal,
     deliveryTime: "40-50 mins",
     category: "Veg",
     menu: [
