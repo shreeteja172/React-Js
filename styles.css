@@ -259,59 +259,180 @@ a {
   padding: 0.5rem 1rem 1rem;
 }
 
-/* --- SHIMMER UI --- */
+/* --- ENHANCED SHIMMER UI --- */
+.shimmer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.shimmer-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 500px;
+}
+
+.shimmer-search-box {
+  height: 44px;
+  border-radius: 30px;
+  width: 100%;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.shimmer-btn-small {
+  height: 44px;
+  width: 100px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.shimmer-btn-large {
+  height: 44px;
+  width: 120px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
 .shimmer-card {
   position: relative;
   overflow: hidden;
   height: 350px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .shimmer-img {
   height: 200px;
-  background: #f0f0f0;
-  margin-bottom: 1rem;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.shimmer-title {
+  height: 24px;
+  margin: 16px 16px 8px;
+  width: 70%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .shimmer-line {
-  height: 15px;
-  margin: 10px 1rem;
-  background: #f0f0f0;
-  position: relative;
-  overflow: hidden;
+  height: 16px;
+  margin: 8px 16px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .shimmer-line.short {
   width: 60%;
 }
 
-.shimmer-card::before,
-.shimmer-img::before,
-.shimmer-line::before {
-  content: '';
-  position: absolute;
-  left: -150px;
-  top: 0;
-  height: 100%;
-  width: 150px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
-  animation: shimmer 1.5s infinite;
+.shimmer-meta {
+  display: flex;
+  margin: 16px 16px 8px;
 }
 
-@keyframes shimmer {
+.shimmer-dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.shimmer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.6), 
+    transparent
+  );
+  transform: skewX(-15deg);
+  animation: shimmerAnimation 2.5s infinite;
+  z-index: 2;
+}
+
+@keyframes shimmerAnimation {
   0% {
-    left: -150px;
+    left: -100%;
+  }
+  25%, 100% {
+    left: 150%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
   }
   100% {
-    left: 100%;
+    background-position: 100% 0;
   }
 }
 
 .shimmer-btn {
-  background: #f0f0f0;
+  background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: pulse 2s ease-in-out infinite;
   color: transparent;
   pointer-events: none;
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .shimmer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .shimmer-search {
+    max-width: 100%;
+  }
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.res-card {
+  cursor: pointer;
+}
+
+.res-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .res-container .shimmer-card {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* --- ERROR PAGE --- */

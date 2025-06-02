@@ -1,7 +1,8 @@
 import restaurantsData from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
-
+import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -33,31 +34,33 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button className="filter-btn" onClick={handleTopRated}>
+        {/* <button className="filter-btn" onClick={handleTopRated}>
           Top Rated
-        </button>
+        </button> */}
       </div>
 
-      <button onClick={()=>{
+      {/* <button onClick={()=>{
         // settemp(!temp)
         const retrieveddata  = restaurantsData.filter((data)=> (
           data.price > 500
         ))
         setFilteredRestaurant(retrieveddata)
-      }}>Over 500$</button>
+      }}>Over 500$</button> */}
       
       <div className="res-container">
         {filteredRestaurant.map((restaurant) => (
+          <Link to='/restaurants/'
+            key={restaurant.id}>
           <RestaurantCard
-            key={restaurant.id}
+            id={restaurant.id}
             title={restaurant.title}
             cuisines={restaurant.cuisines}
             photo={restaurant.photo}
-            price={restaurant.price}
             rating={restaurant.rating}
             deliveryTime={restaurant.deliveryTime}
             category={restaurant.category}
           />
+          </Link>
         ))}
       </div>
     </div>
