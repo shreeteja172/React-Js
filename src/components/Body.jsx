@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
-  const [temp,settemp] = useState(false)
   const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantsData);
 
   const handleSearch = () => {
@@ -40,7 +39,7 @@ const Body = () => {
       </div>
 
       <button onClick={()=>{
-        settemp(!temp)
+        // settemp(!temp)
         const retrieveddata  = restaurantsData.filter((data)=> (
           data.price > 500
         ))
